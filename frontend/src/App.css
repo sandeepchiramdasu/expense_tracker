@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #111827;
+  color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  background-color: #1f2937;
+  color: #f9fafb;
+  font-size: 0.95rem;
+  min-width: 160px;
+}
+
+.filters button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.filters button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.filters .apply-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.filters .reset-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Add Expense Button */
+.add-expense-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.add-expense-btn:hover {
+  opacity: 0.9;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1f2937;
+}
+
+thead {
+  background-color: #374151;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #2d3748;
+}
+
+tbody tr:hover {
+  background-color: #2563eb20;
+}
+
+/* Category badge */
+.category-badge {
+  background-color: #3b82f6;
+  padding: 3px 7px;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.85rem;
+}
+
+/* Action buttons */
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.edit-btn {
+  background-color: #f59e0b;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 24, 39, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #1f2937;
+  padding: 25px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  color: #f9fafb;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  margin: 8px 0 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #374151;
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal-close {
+  background-color: #ef4444;
+  color: white;
+}
+
+.modal-save {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.modal-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* Total Expenses */
+.total-expenses {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #3b82f6;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}

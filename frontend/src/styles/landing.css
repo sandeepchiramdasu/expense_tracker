@@ -1,0 +1,93 @@
+.landing-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f1724, #1e293b);
+  color: #e2e8f0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.landing-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 950px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(30, 41, 59, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid #334155;
+}
+
+.landing-left {
+  flex: 1;
+  min-width: 280px;
+  margin-right: 30px;
+}
+
+.landing-left h1 {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.landing-left p {
+  color: #94a3b8;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.feature-list div {
+  color: #94a3b8;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.landing-right {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(15, 23, 36, 0.8);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: rgba(30, 41, 59, 0.6);
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tab:hover {
+  background: #3b82f6;
+  color: #0f1724;
+}
+
+.tab.active {
+  background: #3b82f6;
+  color: #0f1724;
+}
+
+.auth-panel {
+  margin-top: 10px;
+}
+
+.landing-footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}

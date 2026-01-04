@@ -1,0 +1,187 @@
+.expense-list {
+  margin: 20px auto;
+  max-width: 950px;
+  color: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: #1f2937;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.expense-table th,
+.expense-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #374151;
+  text-align: left;
+}
+
+.expense-table th {
+  background-color: #2d3748;
+  font-weight: 600;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.expense-table tr:nth-child(even) {
+  background-color: #1e293b;
+}
+
+.expense-table tr:hover {
+  background-color: #3b4252;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #4c1d95, #6d28d9);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+  background: linear-gradient(90deg, #5b21b6, #7c3aed);
+  transform: scale(1.05);
+}
+
+.expense-table button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.expense-table button.edit-btn {
+  background-color: #2563eb;
+}
+
+.expense-table button.edit-btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+
+.expense-table button.delete-btn {
+  background-color: #dc2626;
+}
+
+.expense-table button.delete-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+.no-expenses {
+  text-align: center;
+  padding: 25px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background-color: #1f2937;
+  padding: 30px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #f9fafb;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal input,
+.modal select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background-color: #273549;
+  color: #f9fafb;
+  font-size: 15px;
+}
+
+.modal input:focus,
+.modal select:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.3);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  color: #000000;
+}
+
+.modal-buttons button.save-btn {
+  background-color: #059669;
+}
+
+.modal-buttons button.save-btn:hover {
+  background-color: #047857;
+  transform: scale(1.05);
+}
+
+.modal-buttons button.cancel-btn {
+  background-color: #dc2626;
+}
+
+.modal-buttons button.cancel-btn:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button.delete {
+  background-color: #b91c1c;
+}
+
+button.edit {
+  background-color: #2563eb;
+}

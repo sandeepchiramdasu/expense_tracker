@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+
+    <h2>Total Expenses: ₹{{ total_expenses }}</h2>
+
+    <a href="{% url 'add_expense' %}">Add Expense</a>
+
+    {% if expenses_by_category %}
+        {% for category, data in expenses_by_category.items %}
+            <h2>{{ category }} - Total: ₹{{ data.total }}</h2>
+            <ul>
+                {% for expense in data.expenses %}
+                <li>
+                    {{ expense.title }} - ${{ expense.amount }} ({{ expense.date }})
+                    <a href="{% url 'edit_expense' expense.id %}">Edit</a> |
+                    <a href="{% url 'delete_expense' expense.id %}">Delete</a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    {% else %}
+        <p>No expenses added yet.</p>
+    {% endif %}
+</body>
+</html>
